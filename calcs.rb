@@ -19,5 +19,17 @@ p[1] = (y / denominator).round(2)
   p[i] = (p[i-1] * (k[i-1] / 100.0)).round(2)
 end
 
+# check
+sum = 0
+(1..6).each do |i|
+  sum = sum + n[i] * p[i]
+end
 
-p p.sum
+
+difference = (y - sum).round(2)
+if difference > 0 then
+  puts difference #TODO: 
+elsif difference < 0
+  throw "error"
+end
+  
